@@ -18,9 +18,6 @@ I am a student at ICFAI Tech Hyderabad. Currently working on multiple projects /
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=g-charan&limit=5&theme=dark&combine_all_yearly_contributions=true)
-
 ---
 [![](https://visitcount.itsvg.in/api?id=g-charan&icon=0&color=0)](https://visitcount.itsvg.in)
 
