@@ -1,23 +1,36 @@
 # Charan Gutti
 
-Software engineer in Hyderabad, B.Tech in Computer Science (ICFAI Tech, 2026).
-Open to backend, systems, platform and AI engineering roles, on-site in
-Hyderabad or remote.
+I write the library instead of importing it, then benchmark the result against
+the library. Nine times so far: a time-series database, an LSM tree, an API
+gateway, a Nasdaq order book, a vector index, an RTMP server, a compiler to
+WebAssembly, a RAG service and an LLM inference engine. Go, Java, C++, Python
+and TypeScript, standard library first. Every number in one of my READMEs comes
+from a test or benchmark in that repository, and when the number is bad the
+README says so.
 
-I learn things by building them without the library that usually does the
-work: storage engines, protocol servers, an order book, a compiler, a vector
-index, a RAG service and an LLM inference engine, each written on the standard
-library, benchmarked against the established implementation, and most of them
-running live.
+B.Tech in Computer Science, ICFAI Tech Hyderabad, 2026. Looking for backend,
+systems, platform or AI engineering work, in Hyderabad or remote.
 
 [cgportfolio.vercel.app](https://cgportfolio.vercel.app) ·
 [charan.gutti@gmail.com](mailto:charan.gutti@gmail.com) ·
 [linkedin.com/in/Charan-Gutti](https://linkedin.com/in/Charan-Gutti)
 
-## Projects
+## Right now
 
-Every number came from a benchmark or test in the repository, on an Apple M4
-Max. Re-run them; they will differ on your hardware.
+Six of the projects run on one small EC2 instance and report on themselves.
+These lines are rewritten every six hours by [`build_readme.py`](build_readme.py),
+which reads each demo's own `/metrics` or `/stats`.
+
+<!-- live starts -->
+<!-- live ends -->
+
+If one says it did not answer, the box is having a bad day; the code is still
+here.
+
+## The projects
+
+Every number below came from a benchmark or test in the repository, on an
+Apple M4 Max. Re-run them; they will differ on your hardware.
 
 | Project | What it is | The number worth quoting | Live |
 |---|---|---|---|
@@ -31,8 +44,26 @@ Max. Re-run them; they will differ on your hardware.
 | [ragmeter](https://github.com/g-charan/ragmeter) | RAG question answering over HotpotQA with a LangGraph agent and an eval harness, on hnsw-cpp | 0.81 recall@10; retrieval lifts exact match from 10.0% to 24.3%; CI fails if recall drops | [ask it](https://rag.35-154-87-88.sslip.io) |
 | [paged-llama](https://github.com/g-charan/paged-llama) | Llama + PagedAttention reimplemented in C++23, served over an OpenAI-compatible API | Logits match Hugging Face to 4e-4; 406 tok/s aggregate at 32 streams, 3.2x behind llama.cpp and says why | [API](https://llm.35-154-87-88.sslip.io/v1/models) |
 
-The demos run on one EC2 instance behind Caddy; the stack that serves them is
-[portfolio-deploy](https://github.com/g-charan/portfolio-deploy).
+The stack that serves them is [portfolio-deploy](https://github.com/g-charan/portfolio-deploy):
+Caddy, `docker compose`, and two sidecars that generate traffic so the demos
+have something to show.
+
+## What they taught me
+
+- **A benchmark you cannot lose is marketing.** paged-llama ships the llama.cpp
+  comparison it loses by 3.2x and explains why. hnsw-cpp says its lead over
+  hnswlib disappears with SIMD turned off.
+- **The differential test is the test.** orderbook-cpp replays a million
+  messages through its book and a `std::map` book and compares after every one.
+  paged-llama holds its logits to the `transformers` reference. wasm-forge makes
+  the interpreter, the `.wasm` binary and the browser agree.
+- **Let a tool that knows nothing about your code check your code.** jlsm's
+  numbers come from `redis-benchmark`, rtmp-server's from `ffprobe`, go-tsdb's
+  from a stock Prometheus scraping it.
+- **The paper's number is for the paper's data.** go-tsdb gets 4.2x
+  compression, not Gorilla's 10x, and working out why was the interesting part.
+- **For anything with a model in it, the eval harness is the product.**
+  ragmeter's README lists its numbers and then says which ones to distrust.
 
 ## Stack
 
@@ -43,7 +74,7 @@ The demos run on one EC2 instance behind Caddy; the stack that serves them is
 - **Frontend:** React, Next.js, React Native, Flutter, Tailwind CSS
 - **Infrastructure:** Docker, Docker Compose, GitHub Actions, Prometheus, Grafana, AWS EC2, Linux, Git
 
-## Experience
+## Before this
 
 - **EFILOS Technologies** — Frontend Engineer (part-time), Jun 2025 – Aug 2026
 - **Pi Exploration Inc** — Software Developer Intern (remote), Jan 2026 – Jun 2026
@@ -52,8 +83,6 @@ The demos run on one EC2 instance behind Caddy; the stack that serves them is
 Four pull requests merged into [Orn](https://github.com/pabloosabaterr/Orn),
 an open-source compiler in C: source-location tracking through the lexer and
 parser, negative-float parsing, comment support. State-level finalist, Smart
-India Hackathon 2024.
-
-Earlier work: [CodeScribe](https://github.com/g-charan/CodeScribe) (commit
-messages from a diff), [Cryptic](https://github.com/g-charan/Cryptic) (peer-to-peer
-chat over WebRTC), and the rest of the repositories here.
+India Hackathon 2024. Older work — [CodeScribe](https://github.com/g-charan/CodeScribe),
+[Cryptic](https://github.com/g-charan/Cryptic) and the rest of the repositories
+here — is from before I started doing it this way.
