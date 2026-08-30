@@ -52,8 +52,8 @@ Apple M4 Max. Re-run them; they will differ on your hardware.
 | [ragmeter](https://github.com/g-charan/ragmeter) | RAG question answering over HotpotQA with a LangGraph agent and an eval harness, on hnsw-cpp | 0.81 recall@10; retrieval lifts exact match from 10.0% to 24.3%; CI fails if recall drops | [ask it](https://rag.35-154-87-88.sslip.io) |
 | [paged-llama](https://github.com/g-charan/paged-llama) | Llama + PagedAttention reimplemented in C++23, served over an OpenAI-compatible API | Logits match Hugging Face to 4e-4; 406 tok/s aggregate at 32 streams, 3.2x behind llama.cpp and says why | [API](https://llm.35-154-87-88.sslip.io/v1/models) |
 
-The stack that serves them is [portfolio-deploy](https://github.com/g-charan/portfolio-deploy):
-Caddy, `docker compose`, and two sidecars that generate traffic so the demos
+The stack that serves them is [portfolio-deploy](https://github.com/g-charan/portfolio-deploy) — the host in Terraform,
+then Caddy, `docker compose`, and two sidecars that generate traffic so the demos
 have something to show.
 
 ## What they taught me
@@ -80,7 +80,7 @@ have something to show.
 - **Machine learning:** RAG, LangGraph / LangChain, LLM inference and serving, Hugging Face Transformers, PyTorch, INT8 quantization, KV cache / PagedAttention, vector search (HNSW, pgvector), LLM-as-judge evaluation
 - **Backend:** Netty, Redis, PostgreSQL, Node.js, FastAPI, REST APIs, JWT authentication
 - **Frontend:** React, Next.js, React Native, Flutter, Tailwind CSS
-- **Infrastructure:** Docker, Docker Compose, GitHub Actions, Prometheus, Grafana, AWS EC2, Linux, Git
+- **Infrastructure:** Docker, Docker Compose, Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana, AWS EC2, Linux, Git
 
 ## Before this
 
