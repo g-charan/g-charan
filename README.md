@@ -83,15 +83,4 @@ have something to show.
 - **Frontend:** React, Next.js, React Native, Flutter, Tailwind CSS
 - **Infrastructure:** Docker, Docker Compose, Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana, AWS EC2, Linux, Git
 
-## Before this
 
-- **EFILOS Technologies** — Frontend Engineer (part-time), Jun 2025 – Aug 2026
-- **Pi Exploration Inc** — Software Developer Intern (remote), Jan 2026 – Jun 2026
-- **Gigsearch** — Full Stack Developer Intern, Jun 2024 – Aug 2024
-
-Four pull requests merged into [Orn](https://github.com/pabloosabaterr/Orn),
-an open-source compiler in C: source-location tracking through the lexer and
-parser, negative-float parsing, comment support. State-level finalist, Smart
-India Hackathon 2024. Older work — [CodeScribe](https://github.com/g-charan/CodeScribe),
-[Cryptic](https://github.com/g-charan/Cryptic) and the rest of the repositories
-here — is from before I started doing it this way.
