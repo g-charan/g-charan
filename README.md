@@ -44,7 +44,7 @@ Apple M4 Max. Re-run them; they will differ on your hardware.
 |---|---|---|---|
 | [go-tsdb](https://github.com/g-charan/go-tsdb) | Time-series database in Go: Gorilla compression, WAL, Prometheus-compatible endpoint | 14.4 M samples/sec ingest, 4.2x compression on real telemetry | [Grafana](https://tsdb.35-154-87-88.sslip.io) |
 | [jlsm](https://github.com/g-charan/jlsm) | LSM-tree key-value engine in Java, speaking the Redis wire protocol | 77.8 k SET/sec and 137 k GET/sec, cross-checked with `redis-benchmark` | [dashboard](https://jlsm.35-154-87-88.sslip.io) |
-| [jgate](https://github.com/g-charan/jgate) | Netty API gateway: JWT on the event loop, token bucket in Redis Lua | 36 k req/sec, +0.08 ms p50 over talking to the backend directly | [rate limits](https://gateway.35-154-87-88.sslip.io) |
+| [jgate](https://github.com/g-charan/jgate) | Netty API gateway: JWT on the event loop, token bucket in Redis Lua, three replicas on Kubernetes | 36 k req/sec, +0.08 ms p50 over the backend; a 60-request burst across 3 replicas gets one bucket through, not three | [rate limits](https://gateway.35-154-87-88.sslip.io) |
 | [orderbook-cpp](https://github.com/g-charan/orderbook-cpp) | ITCH 5.0 parser and limit order book in C++23 | 18.9 M messages/sec, p99 166 ns, 800x better worst case than `std::map` | |
 | [hnsw-cpp](https://github.com/g-charan/hnsw-cpp) | HNSW vector index in C++23 with NEON kernels | 1.68x hnswlib's throughput at 0.99 recall on SIFT1M | [demo](https://g-charan.github.io/hnsw-cpp/) |
 | [rtmp-server](https://github.com/g-charan/rtmp-server) | RTMP ingest to HLS in Go: handshake, chunk stream and MPEG-TS muxer | 1,000 concurrent publishers, 0 dropped, 2.46 s to first playable segment | [player](https://live.35-154-87-88.sslip.io) |
@@ -67,7 +67,8 @@ have something to show.
   the interpreter, the `.wasm` binary and the browser agree.
 - **Let a tool that knows nothing about your code check your code.** jlsm's
   numbers come from `redis-benchmark`, rtmp-server's from `ffprobe`, go-tsdb's
-  from a stock Prometheus scraping it.
+  from a stock Prometheus scraping it, and the Terraform for the demo host was
+  imported from the running box until `plan` said "No changes".
 - **The paper's number is for the paper's data.** go-tsdb gets 4.2x
   compression, not Gorilla's 10x, and working out why was the interesting part.
 - **For anything with a model in it, the eval harness is the product.**
