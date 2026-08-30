@@ -1,24 +1,59 @@
-# 💫 About Me:
-I am a student at ICFAI Tech Hyderabad. Currently working on multiple projects / application which can solve real world problems. I am very invested in my current field of study which is the computer science.Always experimenting and hopefully failing to gain the curiosity to learn new things for me to advance.  
+# Charan Gutti
 
+Software engineer in Hyderabad, B.Tech in Computer Science (ICFAI Tech, 2026).
+Open to backend, systems, platform and AI engineering roles, on-site in
+Hyderabad or remote.
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/https://www.instagram.com/charan_gutti_/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/charan-gutti-b4b264206/) 
+I learn things by building them without the library that usually does the
+work: storage engines, protocol servers, an order book, a compiler, a vector
+index, a RAG service and an LLM inference engine, each written on the standard
+library, benchmarked against the established implementation, and most of them
+running live.
 
-# 💻 Tech Stack:
- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)  ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)  ! ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Adobe Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF.svg?style=for-the-badge&logo=Adobe%20Premiere%20Pro&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=g-charan&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=g-charan&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=g-charan&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+[cgportfolio.vercel.app](https://cgportfolio.vercel.app) ·
+[charan.gutti@gmail.com](mailto:charan.gutti@gmail.com) ·
+[linkedin.com/in/Charan-Gutti](https://linkedin.com/in/Charan-Gutti)
 
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=g-charan&theme=radical&no-frame=false&no-bg=true&margin-w=4)
+## Projects
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+Every number came from a benchmark or test in the repository, on an Apple M4
+Max. Re-run them; they will differ on your hardware.
 
----
-[![](https://visitcount.itsvg.in/api?id=g-charan&icon=0&color=0)](https://visitcount.itsvg.in)
+| Project | What it is | The number worth quoting | Live |
+|---|---|---|---|
+| [go-tsdb](https://github.com/g-charan/go-tsdb) | Time-series database in Go: Gorilla compression, WAL, Prometheus-compatible endpoint | 14.4 M samples/sec ingest, 4.2x compression on real telemetry | [Grafana](https://tsdb.35-154-87-88.sslip.io) |
+| [jlsm](https://github.com/g-charan/jlsm) | LSM-tree key-value engine in Java, speaking the Redis wire protocol | 77.8 k SET/sec and 137 k GET/sec, cross-checked with `redis-benchmark` | [dashboard](https://jlsm.35-154-87-88.sslip.io) |
+| [jgate](https://github.com/g-charan/jgate) | Netty API gateway: JWT on the event loop, token bucket in Redis Lua | 36 k req/sec, +0.08 ms p50 over talking to the backend directly | [rate limits](https://gateway.35-154-87-88.sslip.io) |
+| [orderbook-cpp](https://github.com/g-charan/orderbook-cpp) | ITCH 5.0 parser and limit order book in C++23 | 18.9 M messages/sec, p99 166 ns, 800x better worst case than `std::map` | |
+| [hnsw-cpp](https://github.com/g-charan/hnsw-cpp) | HNSW vector index in C++23 with NEON kernels | 1.68x hnswlib's throughput at 0.99 recall on SIFT1M | [demo](https://g-charan.github.io/hnsw-cpp/) |
+| [rtmp-server](https://github.com/g-charan/rtmp-server) | RTMP ingest to HLS in Go: handshake, chunk stream and MPEG-TS muxer | 1,000 concurrent publishers, 0 dropped, 2.46 s to first playable segment | [player](https://live.35-154-87-88.sslip.io) |
+| [wasm-forge](https://github.com/g-charan/wasm-forge) | A language that compiles to real WebAssembly, in TypeScript | 1,988 lines/ms end to end; output verified against the browser's own runtime | [playground](https://g-charan.github.io/wasm-forge/) |
+| [ragmeter](https://github.com/g-charan/ragmeter) | RAG question answering over HotpotQA with a LangGraph agent and an eval harness, on hnsw-cpp | 0.81 recall@10; retrieval lifts exact match from 10.0% to 24.3%; CI fails if recall drops | [ask it](https://rag.35-154-87-88.sslip.io) |
+| [paged-llama](https://github.com/g-charan/paged-llama) | Llama + PagedAttention reimplemented in C++23, served over an OpenAI-compatible API | Logits match Hugging Face to 4e-4; 406 tok/s aggregate at 32 streams, 3.2x behind llama.cpp and says why | [API](https://llm.35-154-87-88.sslip.io/v1/models) |
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+The demos run on one EC2 instance behind Caddy; the stack that serves them is
+[portfolio-deploy](https://github.com/g-charan/portfolio-deploy).
+
+## Stack
+
+- **Languages:** C++, Java, Go, TypeScript, Python, SQL
+- **Systems:** TCP sockets, concurrency, lock-free data structures, mmap, write-ahead logs, SIMD (NEON), event loops, RTMP / MPEG-TS
+- **Machine learning:** RAG, LangGraph / LangChain, LLM inference and serving, Hugging Face Transformers, PyTorch, INT8 quantization, KV cache / PagedAttention, vector search (HNSW, pgvector), LLM-as-judge evaluation
+- **Backend:** Netty, Redis, PostgreSQL, Node.js, FastAPI, REST APIs, JWT authentication
+- **Frontend:** React, Next.js, React Native, Flutter, Tailwind CSS
+- **Infrastructure:** Docker, Docker Compose, GitHub Actions, Prometheus, Grafana, AWS EC2, Linux, Git
+
+## Experience
+
+- **EFILOS Technologies** — Frontend Engineer (part-time), Jun 2025 – Aug 2026
+- **Pi Exploration Inc** — Software Developer Intern (remote), Jan 2026 – Jun 2026
+- **Gigsearch** — Full Stack Developer Intern, Jun 2024 – Aug 2024
+
+Four pull requests merged into [Orn](https://github.com/pabloosabaterr/Orn),
+an open-source compiler in C: source-location tracking through the lexer and
+parser, negative-float parsing, comment support. State-level finalist, Smart
+India Hackathon 2024.
+
+Earlier work: [CodeScribe](https://github.com/g-charan/CodeScribe) (commit
+messages from a diff), [Cryptic](https://github.com/g-charan/Cryptic) (peer-to-peer
+chat over WebRTC), and the rest of the repositories here.
