@@ -22,12 +22,12 @@ These lines are rewritten every six hours by [`build_readme.py`](build_readme.py
 which reads each demo's own `/metrics` or `/stats`.
 
 <!-- live starts -->
-_Fetched 2026-09-01 05:12 UTC._
+_Fetched 2026-09-01 11:41 UTC._
 
-- **go-tsdb** holds 483,390 samples across 30 series, up 2 d 19 h; Prometheus is scraping it and the box it runs on is at load 1.84.
-- **jlsm** has taken 404.0 M writes and 404.0 M reads from a `redis-benchmark` sidecar in 2 d 18 h, through 4,917 flushes and 1,229 compactions; the Bloom filters turned away 32.6 M disk lookups.
+- **go-tsdb** holds 530,070 samples across 30 series, up 3 d 1 h; Prometheus is scraping it and the box it runs on is at load 0.70.
+- **jlsm** has taken 443.5 M writes and 443.5 M reads from a `redis-benchmark` sidecar in 3 d 0 h, through 5,398 flushes and 1,349 compactions; the Bloom filters turned away 35.8 M disk lookups.
 - **jgate** has seen 172 requests: 116 proxied, 39 rate-limited by the Lua token bucket, 17 rejected for a bad JWT.
-- **rtmp-server** is muxing an ffmpeg test stream into MPEG-TS: 5 segments in the playlist, sequence number 118,175.
+- **rtmp-server** is muxing an ffmpeg test stream into MPEG-TS: 5 segments in the playlist, sequence number 129,846.
 - **ragmeter** has 15,193 chunks in its hnsw-cpp index and has answered 1 question from visitors, generating through paged-llama (`qwen2.5-0.5b-instruct`).
 - **paged-llama** has finished 3 completions and generated 104 tokens; 38 of 256 KV blocks are in use and the prefix cache holds 38 blocks.
 <!-- live ends -->
