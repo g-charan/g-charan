@@ -22,14 +22,14 @@ These lines are rewritten every six hours by [`build_readme.py`](build_readme.py
 which reads each demo's own `/metrics` or `/stats`.
 
 <!-- live starts -->
-_Fetched 2026-09-02 04:37 UTC._
+_Fetched 2026-09-02 11:22 UTC._
 
-- **go-tsdb** holds 651,960 samples across 30 series, up 3 d 18 h; Prometheus is scraping it and the box it runs on is at load 0.51.
-- **jlsm** has taken 546.8 M writes and 546.8 M reads from a `redis-benchmark` sidecar in 3 d 17 h, through 6,656 flushes and 1,664 compactions; the Bloom filters turned away 44.1 M disk lookups.
-- **jgate** has seen 172 requests: 116 proxied, 39 rate-limited by the Lua token bucket, 17 rejected for a bad JWT.
-- **rtmp-server** is muxing an ffmpeg test stream into MPEG-TS: 5 segments in the playlist, sequence number 160,317.
-- **ragmeter** has 15,193 chunks in its hnsw-cpp index and has answered 1 question from visitors, generating through paged-llama (`qwen2.5-0.5b-instruct`).
-- **paged-llama** has finished 3 completions and generated 104 tokens; 38 of 256 KV blocks are in use and the prefix cache holds 38 blocks.
+- **go-tsdb** did not answer (URLError).
+- **jlsm** did not answer (URLError).
+- **jgate** did not answer (URLError).
+- **rtmp-server** did not answer (URLError).
+- **ragmeter** did not answer (URLError).
+- **paged-llama** did not answer (URLError).
 <!-- live ends -->
 
 If one says it did not answer, the box is having a bad day; the code is still
