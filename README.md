@@ -22,7 +22,7 @@ These lines are rewritten every six hours by [`build_readme.py`](build_readme.py
 which reads each demo's own `/metrics` or `/stats`.
 
 <!-- live starts -->
-_Fetched 2026-10-08 06:10 UTC._
+_Fetched 2026-10-08 13:35 UTC._
 
 - **go-tsdb** did not answer (URLError).
 - **jlsm** did not answer (URLError).
